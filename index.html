@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Қыз ұзату Акботы</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(to bottom, #f8f3ec, #f6e9da);
+      color: #333;
+      text-align: center;
+    }
+    header {
+      padding: 30px;
+      background: #d4af37;
+      color: white;
+    }
+    h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+    .lang-switch {
+      margin-top: 10px;
+    }
+    .lang-switch button {
+      background: white;
+      border: none;
+      margin: 0 5px;
+      padding: 8px 14px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    section {
+      padding: 20px;
+    }
+    .card {
+      background: white;
+      margin: 20px auto;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 600px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .btn {
+      display: inline-block;
+      background: #d4af37;
+      color: white;
+      padding: 14px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .btn:hover {
+      background: #b9962d;
+    }
+    iframe {
+      border: none;
+      width: 100%;
+      height: 300px;
+      margin-top: 20px;
+      border-radius: 10px;
+    }
+    footer {
+      padding: 20px;
+      background: #f2e4c9;
+      font-size: 0.9em;
+      color: #555;
+    }
+  </style>
+  <script>
+    function switchLang(lang) {
+      document.querySelectorAll('[data-lang]').forEach(el => {
+        el.style.display = el.getAttribute('data-lang') === lang ? 'block' : 'none';
+      });
+    }
+    window.onload = () => switchLang('ru');
+  </script>
+</head>
+<body>
+  <header>
+    <h1 data-lang="ru">Қыз ұзату Акботы</h1>
+    <h1 data-lang="kz">Ақботаның Қыз ұзатуы</h1>
+    <div class="lang-switch">
+      <button onclick="switchLang('ru')">RU</button>
+      <button onclick="switchLang('kz')">KZ</button>
+    </div>
+  </header>
+
+  <section>
+    <div class="card">
+      <h2 data-lang="ru">Дорогие гости!</h2>
+      <h2 data-lang="kz">Құрметті қонақтар!</h2>
+
+      <p data-lang="ru">С радостью приглашаем Вас на торжество <br> Қыз ұзату Акботы</p>
+      <p data-lang="kz">Сіздерді Ақботаның Қыз ұзату тойына шақырамыз!</p>
+
+      <p data-lang="ru"><b>Дата:</b> 1 ноября 2025 года, 18:00</p>
+      <p data-lang="kz"><b>Күні:</b> 2025 жылғы 1 қараша, 18:00</p>
+
+      <p data-lang="ru"><b>Место:</b> г. Тараз, ресторан «Ақ Сарай», ул. Аль-Фараби 25г</p>
+      <p data-lang="kz"><b>Орны:</b> Тараз қ., «Ақ Сарай» мейрамханасы, Әл-Фараби 25г</p>
+
+      <p data-lang="ru"><b>Дресс-код:</b> нарядный</p>
+      <p data-lang="kz"><b>Дресс-код:</b> салтанатты</p>
+
+      <p data-lang="ru"><b>Контакт:</b> Фарида — 8 778 597 53 40</p>
+      <p data-lang="kz"><b>Байланыс:</b> Фарида — 8 778 597 53 40</p>
+    </div>
+
+    <a href="#rsvp" class="btn" data-lang="ru">Подтвердить участие</a>
+    <a href="#rsvp" class="btn" data-lang="kz">Қатысуымды растау</a>
+
+    <iframe src="https://maps.google.com/maps?q=Тараз,%20Аль-Фараби%2025г&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
+  </section>
+
+  <section id="rsvp">
+    <div class="card">
+      <h2 data-lang="ru">Подтвердите участие</h2>
+      <h2 data-lang="kz">Қатысуыңызды растаңыз</h2>
+
+      <form name="rsvp" method="POST" data-netlify="true">
+        <p><input type="text" name="name" placeholder="Ваше имя / Атыңыз" required></p>
+        <p><input type="tel" name="phone" placeholder="Телефон" required></p>
+        <p><textarea name="message" placeholder="Комментарий (опционально)"></textarea></p>
+        <p><button type="submit" class="btn" data-lang="ru">Отправить</button>
+           <button type="submit" class="btn" data-lang="kz">Жіберу</button></p>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p data-lang="ru">С нетерпением ждём Вас на нашем торжестве 💛</p>
+    <p data-lang="kz">Сіздерді тойымызда асыға күтеміз 💛</p>
+  </footer>
+</body>
+</html>
