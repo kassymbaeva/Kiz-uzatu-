@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ақбота - Қыз Ұзату</title>
+    <!-- Каллиграфические шрифты -->
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Alex+Brush&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Alex Brush', cursive;
+            background: linear-gradient(to bottom right, #fff8f0, #fdf5ef);
+            color: #5a3e36;
+            text-align: center;
+        }
+        header {
+            padding: 80px 20px 40px;
+            background: url('images/top-ornament.png') no-repeat center top;
+            background-size: 200px;
+        }
+        header h1 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 80px;
+            margin: 0;
+            color: #b8902f;
+            text-shadow: 2px 2px 6px rgba(0,0,0,0.15);
+        }
+        header h2 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 52px;
+            margin: 10px 0 0;
+            color: #b8902f;
+        }
+        main {
+            padding: 50px 20px;
+            max-width: 850px;
+            margin: auto;
+            background: rgba(255, 255, 255, 0.85);
+            border-radius: 20px;
+            box-shadow: 0 6px 24px rgba(0,0,0,0.1);
+        }
+        main h3 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 46px;
+            margin-bottom: 30px;
+            color: #a76f2f;
+        }
+        main p {
+            font-size: 26px;
+            line-height: 1.8;
+            margin: 18px 0;
+        }
+        .info {
+            margin-top: 40px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        iframe {
+            margin-top: 30px;
+            width: 100%;
+            height: 300px;
+            border: 0;
+            border-radius: 16px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .button {
+            display: inline-block;
+            margin-top: 40px;
+            padding: 16px 32px;
+            font-size: 24px;
+            background: linear-gradient(45deg, #d4af37, #f9e79f);
+            color: #5a3e36;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        footer {
+            margin-top: 60px;
+            padding: 60px 20px;
+            background: url('images/bottom-ornament.png') no-repeat center bottom;
+            background-size: 200px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>АКБОТА</h1>
+        <h2>ҚЫЗ ҰЗАТУ</h2>
+    </header>
+    <main>
+        <h3>ҰЗАТУ</h3>
+        <p>Құрметті қонақтар,</p>
+        <p>Сіздерді аяулы қызымыз <strong>Ақботаның</strong> ұзату тойына арналған</p>
+        <p>салтанатты дастарханның қадірлі қонағы болуға шақырамыз.</p>
+        
+        <div class="info">
+            <p>📅 1 қараша 2025 жыл, 18:00</p>
+            <p>📍 Тараз, ресторан «Ақ Сарай», Әл-Фараби 25г</p>
+            <p>📞 Байланыс: Фарида +7 778 597 5340</p>
+        </div>
+
+        <!-- Карта Google Maps -->
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2932.012324268967!2d71.36814801573036!3d42.89959617915447!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38a706b2b9e63a63%3A0x55d9f3f9a5a1f4b8!2z0JDQvdGC0LDRgNCw0YLQuNGH0LXRgdC60LjQuSDQkNC90YLQsNGD0YHRgtGM!5e0!3m2!1sru!2skz!4v1696345026174!5m2!1sru!2skz" 
+            allowfullscreen="" loading="lazy">
+        </iframe>
+
+        <!-- Кнопка подтверждения -->
+        <a class="button" href="https://wa.me/77785975340?text=Мен%20келемін%20Қыз%20ұзату%20тойына">Подтвердить участие</a>
+    </main>
+    <footer></footer>
+</body>
+</html>
