@@ -1,122 +1,92 @@
+
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="kk">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Қыз ұзату Акботы — 1.11.2025</title>
-  <meta name="description" content="Қыз ұзату Акботы · 1 ноября 2025 · Тараз · Ресторан «Ақ Сарай». Подтвердите участие одной кнопкой.">
+  <title>Қыз Ұзату - Кыз узату</title>
   <style>
-    :root{
-      --bg1:#faf4ee; --bg2:#f6e7d6; --gold:#d6b071; --ink:#2b2f36; --muted:#6b7280;
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #f8e9ef, #f6f1eb);
+      color: #333;
+      text-align: center;
     }
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0}
-    body{
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, Arial, sans-serif;
-      color:var(--ink);
-      background: linear-gradient(180deg,var(--bg1),var(--bg2));
-      line-height:1.6;
-      text-align:center;
+    header {
+      background: url('images/top-ornament.png') no-repeat center top;
+      background-size: contain;
+      padding: 60px 20px 20px;
     }
-    header{
-      position:relative;
-      padding: 36px 16px 28px;
-      color:#3a2a17;
-      background:
-        radial-gradient(1200px 600px at 50% -10%, rgba(255,255,255,.6), transparent),
-        linear-gradient(180deg, #f9efe4, #f1e1cc);
-      border-bottom: 1px solid rgba(214,176,113,.35);
+    header h1 {
+      font-size: 2.5em;
+      color: #b9935a;
+      margin: 0;
     }
-    .orn{
-      position:absolute; inset:0; pointer-events:none; opacity:.25;
-      background-image:
-        radial-gradient(circle at 10% 20%, rgba(214,176,113,.45) 0 2px, transparent 3px),
-        radial-gradient(circle at 90% 30%, rgba(214,176,113,.45) 0 2px, transparent 3px);
-      mask-image: 
-        radial-gradient(ellipse at center, black 0, transparent 70%);
+    section {
+      max-width: 600px;
+      margin: 20px auto;
+      background: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
     }
-    h1{margin:0 0 6px; font-size: clamp(28px, 6vw, 48px)}
-    .subtitle{color:#7a6a58}
-    .switch{margin:10px 0 0; display:flex; gap:8px; justify-content:center}
-    .switch button{
-      border:1px solid rgba(214,176,113,.5); background:#fff; padding:8px 14px; border-radius:10px; cursor:pointer;
+    section h2 {
+      color: #b9935a;
+      margin-bottom: 10px;
     }
-    main{padding: 28px 16px}
-    .card{
-      max-width: 820px; margin: 0 auto 18px; background:#fff; border:1px solid #eee; border-radius:16px;
-      box-shadow: 0 10px 30px rgba(34,40,50,.06); padding: 20px;
+    .button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 24px;
+      background: linear-gradient(135deg, #d4af37, #b9935a);
+      color: white;
+      font-size: 1.1em;
+      border-radius: 30px;
+      text-decoration: none;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     }
-    .facts{list-style:none; padding:0; margin:12px 0}
-    .facts li{margin:6px 0}
-    .btn{
-      display:inline-block; margin:10px 6px; padding:12px 16px; border-radius:12px; text-decoration:none;
-      border:1px solid rgba(214,176,113,.55); background:linear-gradient(180deg,#fff7ec,#f4e0c8);
-      color:#2b2f36; font-weight:600;
+    footer {
+      background: url('images/bottom-ornament.png') no-repeat center bottom;
+      background-size: contain;
+      padding: 60px 20px 20px;
+      margin-top: 30px;
     }
-    .map{width:100%; height:320px; border:0; border-radius:14px; box-shadow:0 6px 20px rgba(0,0,0,.07); margin-top:10px}
-    footer{color:#6b7280; padding:22px}
-    [data-lang]{display:none}
   </style>
-  <script>
-    function switchLang(lang){
-      document.querySelectorAll('[data-lang]').forEach(el=>{
-        el.style.display = (el.dataset.lang===lang) ? 'block' : 'none';
-      });
-      localStorage.setItem('lang', lang);
-    }
-    document.addEventListener('DOMContentLoaded', ()=>{
-      switchLang(localStorage.getItem('lang') || 'ru');
-      // Prefill WhatsApp message with template placeholders
-      const btns = document.querySelectorAll('.rsvp');
-      btns.forEach(btn=>{
-        const base = 'https://wa.me/77785975340?text=';
-        const msg = encodeURIComponent('Салеметсиз бе, Фарида! Хочу подтвердить участие на қыз ұзату Акботы.\nИмя: ____\nКоличество гостей: ____');
-        btn.href = base + msg;
-      });
-    });
-  </script>
 </head>
 <body>
   <header>
-    <div class="orn"></div>
-    <h1 data-lang="ru">Қыз ұзату Акботы</h1>
-    <h1 data-lang="kz">Ақботаның Қыз ұзатуы</h1>
-    <p class="subtitle" data-lang="ru">1 ноября 2025 · 18:00 · Тараз</p>
-    <p class="subtitle" data-lang="kz">2025 ж. 1 қараша · 18:00 · Тараз</p>
-    <div class="switch">
-      <button onclick="switchLang('ru')">RU</button>
-      <button onclick="switchLang('kz')">KZ</button>
-    </div>
+    <h1>Қыз Ұзату / Кыз узату</h1>
   </header>
 
-  <main>
-    <div class="card">
-      <h2 data-lang="ru">Дорогие гости!</h2>
-      <h2 data-lang="kz">Құрметті қонақтар!</h2>
-      <p data-lang="ru">С радостью приглашаем вас разделить с нами тёплый момент — қыз ұзату Акботы.</p>
-      <p data-lang="kz">Ақботаның қыз ұзату тойына шақырамыз. Ізгі тілектеріңіз бен жылы ықыластарыңыз біз үшін қымбат.</p>
+  <section>
+    <h2>📅 Дата / Күні</h2>
+    <p>1 қараша 2025 жыл, 18:00<br>1 ноября 2025 года, 18:00</p>
+  </section>
 
-      <ul class="facts">
-        <li data-lang="ru"><b>Дата и время:</b> 1 ноября 2025, 18:00</li>
-        <li data-lang="kz"><b>Күні мен уақыты:</b> 2025 ж. 1 қараша, 18:00</li>
-        <li data-lang="ru"><b>Место:</b> г. Тараз, ресторан «Ақ Сарай», ул. Аль-Фараби 25г</li>
-        <li data-lang="kz"><b>Орны:</b> Тараз қ., «Ақ Сарай», Әл-Фараби 25г</li>
-        <li data-lang="ru"><b>Дресс-код:</b> нарядный</li>
-        <li data-lang="kz"><b>Дресс-код:</b> салтанатты</li>
-        <li data-lang="ru"><b>Контакт:</b> Фарида — 8 778 597 53 40</li>
-        <li data-lang="kz"><b>Байланыс:</b> Фарида — 8 778 597 53 40</li>
-      </ul>
+  <section>
+    <h2>📍 Мекен-жай / Адрес</h2>
+    <p>Тараз, ресторан «Ақ Сарай», Әл-Фараби 25г</p>
+    <iframe src="https://www.google.com/maps?q=Тараз,+Әл-Фараби+25г&output=embed"
+      width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  </section>
 
-      <a class="btn rsvp" data-lang="ru" href="#">Подтвердить участие в WhatsApp</a>
-      <a class="btn rsvp" data-lang="kz" href="#">WhatsApp арқылы растау</a>
+  <section>
+    <h2>👗 Дресс-код</h2>
+    <p>Нарядный / Салтанатты</p>
+  </section>
 
-      <iframe class="map" src="https://maps.google.com/maps?q=Тараз,%20Аль-Фараби%2025г&t=&z=15&ie=UTF8&iwloc=&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" aria-label="Карта ресторана Ақ Сарай"></iframe>
-    </div>
-  </main>
+  <section>
+    <h2>📞 Байланыс / Контакт</h2>
+    <p>Фарида: <a href="tel:+77785975340">+7 778 597 5340</a></p>
+  </section>
 
-  <footer>
-    <p data-lang="ru">С теплом, семья Акботы · Келгеніңіз — ең үлкен сый 💛</p>
-    <p data-lang="kz">Ізгі ниетпен, Ақботаның отбасы · Келуіңіз — ең үлкен сый 💛</p>
-  </footer>
+  <section>
+    <a class="button" href="https://wa.me/77785975340?text=Я+подтверждаю+своё+участие+в+Қыз+Ұзату">
+      Подтвердить участие
+    </a>
+  </section>
+
+  <footer></footer>
 </body>
 </html>
